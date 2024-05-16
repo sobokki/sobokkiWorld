@@ -1,7 +1,12 @@
+
+import "../app/globals.scss"
+import {Nav} from"@/app/components/nav/nav";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-
+import mainImg from "../../public/mainImg.svg";
+import Image from "next/image";
+import styles from"@/app/layout.module.scss"
+import MainImg from "./components/mainImg/mainImg";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -14,9 +19,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
+
     <html>
-      <body>{children}</body>
+
+    <body>
+   <Nav/>
+   <div className={styles.contents}>
+   <MainImg/>
+
+        {children}
+   </div>
+   </body>
+       
     </html>
     
   );

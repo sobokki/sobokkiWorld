@@ -1,0 +1,48 @@
+@import "../app//main.scss";
+
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  margin-right: 22.2rem;
+  margin-top: 10.6rem;
+  text-align: center;
+  align-items: center;
+  margin-left: 8.5rem;
+
+
+  .title {
+    @include text-48-light();
+    margin-bottom: 0.6rem;
+
+  }
+
+  .position {
+    @include text-48-bold();
+    margin-top: 4.5rem;
+    margin-bottom: 5.5rem;
+    white-space: nowrap;
+
+  }
+
+  button {
+    @include text-32style();
+    border-radius: 1.9rem;
+    border: 0.1rem solid $black;
+    background-color: $black;
+    color: $white;
+    width: 20.4rem;
+    height: 8.4rem;
+
+    &:hover {
+      background-color: $baby-pink;
+      color: $black;
+    }
+
+    .linkText {
+      @include text-32style();
+      text-decoration: none;
+
+    }
+  }
+}
