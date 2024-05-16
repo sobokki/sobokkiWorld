@@ -1,0 +1,42 @@
+@mixin text-48-light() {
+  font-family: Judson;
+  font-size: 4.8rem;
+  font-weight: 400;
+}
+
+@mixin text-48-bold() {
+  font-family: Judson;
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+
+@mixin text-40style() {
+  font-family: Niramit;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+@mixin text-32style() {
+  font-family: Judson;
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+
+@mixin text-24style() {
+  font-family: Judson;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+@mixin text-20style() {
+  font-family: Niramit;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+
+@mixin text-14style() {
+  font-family: Niramit;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
