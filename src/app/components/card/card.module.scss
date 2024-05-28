@@ -1,0 +1,26 @@
+@import "../../main.scss";
+
+.cardWrapper {
+  width: 20rem;
+  height: 5rem;
+  background-color: $light-gray;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    background-color: $pink;
+  }
+}
+
+.nickname {
+  @include text-10style();
+  margin-left: 1rem;
+  color: $gray;
+}
+
+.title {
+  @include text-14style();
+  text-align: center;
+
+}

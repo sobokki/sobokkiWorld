@@ -1,0 +1,39 @@
+@import "../main.scss";
+
+.visitorWrapper {
+  margin-top: 2rem;
+  margin-right: 15rem;
+}
+
+.pencilIcon {
+  display: inline-block;
+
+  .pencilImg {
+    margin-top: 0.5rem;
+  }
+
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: $light-gray;
+  text-align:center;
+
+  &:hover {
+    background-color: $pink;
+  }
+}
+
+.intro {
+  @include text-14style();
+  width: 12rem;
+  background-color: $black;
+  color: $white;
+  padding: 1rem 1.2rem;
+  border-radius: 1.1rem;
+  margin-right: 2.2rem;
+
+}
+
+.banner {
+  margin-bottom: 3rem;
+}
