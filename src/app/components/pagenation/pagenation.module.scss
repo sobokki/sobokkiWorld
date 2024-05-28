@@ -1,0 +1,99 @@
+@import "../../main.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  color: #888;
+  font-size: 1.4rem;
+  height: 2.5rem;
+
+  a {
+    text-decoration: none;
+    color: $black;
+    height: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  ul {
+    list-style: none;
+    text-align: center;
+
+  }
+
+  li {
+    float: left;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid $gray;
+    border-radius: 1rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: 0.2rem;
+
+
+    &:hover {
+      background-color: $light-gray;
+
+    }
+  }
+
+
+  .page {
+    margin: 0.5rem;
+    cursor: pointer;
+    width: 2.5rem;
+    border-radius: 3rem;
+    border: solid 0.1rem rgba(0, 0, 0, 0);
+    text-align: center;
+
+
+  }
+
+  .move {
+    position: relative;
+    cursor: pointer;
+    margin: 0 1rem;
+
+  }
+
+  .move a {
+    width: 5rem;
+    display: block;
+    z-index: 10;
+
+
+  }
+
+  .move a:hover {
+    text-decoration: underline;
+  }
+
+  .move:first-child {
+    text-align: right;
+  }
+
+  .move:first-child::before {
+    content: "<";
+    left: 0;
+  }
+
+  .move:last-child::after {
+    content: ">";
+    right: 0;
+  }
+
+  .invisible {
+    visibility: hidden;
+  }
+
+  .active {
+    font-weight: 700;
+    background: #2f5d62;
+    color: white;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../main.scss";
+
+.className {
+  @include text-14style;
+  background-color: $light-gray;
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &:hover {
+    border: 0.1rem solid $blue;
+  }
+
+  &-error {
+    border: 0.1rem solid $red;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.label {
+  @include text-10style;
+  width: 5.6rem;
+
+
+}

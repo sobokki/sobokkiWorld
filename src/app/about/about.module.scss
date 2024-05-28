@@ -1,0 +1,42 @@
+@import "../main.scss";
+
+.container {
+  margin-top: 2rem;
+  margin-right: 5rem;
+  height: 60rem;
+  overflow-y: auto;
+
+  /* Firefox 브라우저용 */
+  scrollbar-width: none;
+  /* 스크롤바 너비 설정 (없음) */
+  scrollbar-color: transparent;
+  /* 스크롤바 색상 설정 (투명) */
+
+
+  span {
+    @include text-24style();
+    margin-right: 0.8rem;
+
+  }
+
+  .image {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    Image {
+      width: 9.6rem;
+      height: 6.3rem;
+    }
+  }
+
+}
+
+.title {
+  @include text-32style();
+}
+
+.coment {
+  @include text-20style();
+}
