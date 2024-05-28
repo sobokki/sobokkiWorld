@@ -6,6 +6,23 @@
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
+  animation-duration: 3s;
+  animation-name: slidein;
+
+
+  @keyframes slidein {
+    from {
+      margin-bottom: 100%;
+      width: 100%;
+      opacity: 0; //연하게 
+    }
+
+    to {
+      margin-bottom: 0%;
+      width: 100%;
+      opacity: 1; //진하게 
+    }
+  }
 
   .title {
     @include text-48-light();
@@ -22,44 +39,31 @@
     display: flex;
     gap: 2rem;
     white-space: nowrap;
-    animation-duration: 3s;
-    animation-name: slidein;
+
+  }
 
 
-    @keyframes slidein {
-      from {
-        margin-bottom: 100%;
-        width: 100%;
-      }
-
-      to {
-        margin-bottom: 0%;
-        width: 100%;
-      }
-    }
+  .menu {
+    padding: 0.2rem 1.5rem;
+    background-color: $baby-pink;
+    color: $black;
+    text-align: center;
+    text-decoration: none;
 
 
-    .menu {
-      padding: 0.2rem 1.5rem;
-      background-color: $baby-pink;
-      color: $black;
-      text-align: center;
-      text-decoration: none;
-
-      &:hover {
-        background-color: $black;
-        color: $baby-pink;
-
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
-    }
-
-    .active {
-      color: $baby-pink;
+    &:hover {
       background-color: $black;
+      color: $baby-pink;
+
     }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  .active {
+    color: $baby-pink;
+    background-color: $black;
   }
 }
