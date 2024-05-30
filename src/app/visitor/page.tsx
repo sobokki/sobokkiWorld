@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import Loading from "./loading";
 
-const Visitor = dynamic(() => import("./Visitor"), {
+const Visitor = dynamic(() => import("./visitor"), {
   suspense: true,
 });
 
