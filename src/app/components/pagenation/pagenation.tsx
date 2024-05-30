@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import styles from "./pagenation.module.scss";
 import Link from "next/link";
 
@@ -7,10 +8,13 @@ interface PagenationProps {
   totalItems: number; // 데이터의 총 개수 
   itemCountPerPage: number; // 페이지 당 보여줄 데이터의 수 
   pageCount: number; // 보여줄 페이지 개수 
-  currentPage: number; // 현재 페이지 
+  // currentPage: number; // 현재 페이지 
 }
 
-export default function Pagenation({ totalItems, itemCountPerPage, pageCount, currentPage }: PagenationProps) {
+export default function Pagenation({ totalItems, itemCountPerPage, pageCount}: PagenationProps) {
+  const searchParams =useSearchParams();
+  const page =searchParams.get("page");
+  const currentPage = page && parseInt(page) > 0? parseInt(page) :1;
   const totalPages = Math.ceil(totalItems / itemCountPerPage); // 총 페이지 개수 
   const [start, setStart] = useState(1); // 시작 페이지 
   const noPrev = start === 1; // 이전 페이지가 없는 경우 
