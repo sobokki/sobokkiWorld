@@ -17,12 +17,9 @@ export default function Pagenation({ totalItems, itemCountPerPage, pageCount, cu
   const noNext = start + pageCount - 1 >= totalPages; // 다음 페이지가 없는 경우 
 
   useEffect(() => {
-    if (currentPage >= start + pageCount) {
-      setStart(prev => prev + pageCount);
-    } else if (currentPage < start) {
-      setStart(prev => prev - pageCount);
-    }
-  }, [currentPage, pageCount, start]);
+    const newStart = Math.max(1, Math.min(currentPage - Math.floor(pageCount / 2), totalPages - pageCount + 1));
+    setStart(newStart);
+  }, [currentPage, pageCount, totalPages]);
 
   return (
     <div className={styles.wrapper}>

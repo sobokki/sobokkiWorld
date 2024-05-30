@@ -33,7 +33,7 @@ export default function Visitor() {
   useEffect(()=>{
     window.scrollTo(0,0);
    
-  },[page])//페이지 이동시 스크롤 맨 위로 초기화 시키기 
+  },[page])
 
   useEffect(() => {
     const fetchData = async () => {
