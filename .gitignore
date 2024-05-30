@@ -36,4 +36,4 @@ yarn-error.log*
 next-env.d.ts
 
 # pathtonpm-cache
-pathtonpm-cache/
+pathtonpm-cache/public/rolllingDark.svg
