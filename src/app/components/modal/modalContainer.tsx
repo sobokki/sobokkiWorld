@@ -27,7 +27,7 @@ useEffect(()=>{
   return()=>{
     document.removeEventListener("mousedown", handleClickOutsied);
   }
-},[]);
+},[handleClickOutsied]);
   return (
     <div ref={modalOverlayRef} className={styles["modal-overlay"]}>
       <div className={`${styles["modal-container"]} ${className}`}>
