@@ -5,7 +5,7 @@ import styles from "./project.module.scss"
 import KeepyUppyModal from "../components/modal/projectModal/keepyUppyModal";
 import keepyUppyDarkImg from "../../../public/keepyUppydark.svg";
 import taskifyDarkImg from"../../../public/taskifyDark.svg";
-import rollingDarkImg from "../../../public/RolllingDark.svg";
+
 import keepyUppyColorImg from "../../../public/keepyUppyColor.svg";
 import taskifyColorImg from "../../../public/taskifyColor.svg";
 import rollingColorImg from "../../../public/RollingColor.svg";
@@ -48,7 +48,7 @@ export default function Project(){
    onMouseEnter={()=> setHoverd((prev)=>({...prev, rolling:true}))}
    onMouseLeave={()=>setHoverd((prev)=>({...prev, rolling:false}))}
    >
-    <Image className={styles.image} src={hovered.rolling? rollingColorImg:rollingDarkImg} alt="롤링 이미지"  width={493} height={200}/>
+
      {hovered.rolling&& <button onClick={()=>setIsRollingOpen(true)} className={styles.button}>롤링 페이지 사이트 </button>}
   </div>
   {isRollingOpen&&<RollingMdoal closeClick={()=>setIsRollingOpen(false)}/>}
