@@ -8,7 +8,8 @@ import Pagenation from "../components/pagenation/pagenation";
 import Card from "../components/card/card";
 import LetterModal from "../components/modal/letterModal/letterModal";
 import fetchLetters from "../data/fetchLetter";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
+import { GetServerSideProps } from "next";
 
 interface Letter {
   id:string;
@@ -18,22 +19,22 @@ interface Letter {
    createdAt: string; // 작성일자 추가
 }
 
-export default function Visitor() {
+export default function Visitor({ page }: { page: string }) {
   const [letters, setLetters] = useState<Letter[]>([]);
    const [selectedLetter, setSelectedLetter] = useState<Letter | null>(null);
   const [totalItems,setTotalItems]=useState(0);
   const [isModalOpen, setIsModalOpen]=useState<boolean>(false)
-  const searchParams = useSearchParams();
-  const page = searchParams.get("page");
+//  const searchParams = useSearchParams();
+  //const page = context.query.page.get("page");
   const currentPage = page && parseInt(page) > 0 ? parseInt(page) : 1;
   const itemsPerPage = 5;
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentLetters = letters.slice(startIndex, startIndex + itemsPerPage);
   
-  // useEffect(()=>{
-  //   window.scrollTo(0,0);
+  useEffect(()=>{
+    window.scrollTo(0,0);
    
-  // },[page])
+  },[page])
 
   useEffect(() => {
     const fetchData = async () => {
