@@ -30,10 +30,10 @@ export default function Visitor() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentLetters = letters.slice(startIndex, startIndex + itemsPerPage);
   
-  useEffect(()=>{
-    window.scrollTo(0,0);
+  // useEffect(()=>{
+  //   window.scrollTo(0,0);
    
-  },[page])
+  // },[page])
 
   useEffect(() => {
     const fetchData = async () => {
