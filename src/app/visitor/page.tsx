@@ -48,7 +48,7 @@ export default function Visitor() {
     };
 
     fetchData();
-  }, []);
+  }, [totalItems]);
 
 const handleCardClick = (letter: Letter) => {
     setSelectedLetter(letter);

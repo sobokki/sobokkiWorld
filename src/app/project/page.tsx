@@ -5,7 +5,7 @@ import styles from "./project.module.scss"
 import KeepyUppyModal from "../components/modal/projectModal/keepyUppyModal";
 import keepyUppyDarkImg from "../../../public/keepyUppydark.svg";
 import taskifyDarkImg from"../../../public/taskifyDark.svg";
-import rollingDarkImg from "../../../public/rolllingDark.svg";
+import rollingDarkImg from "../../../public/RolllingDark.svg";
 import keepyUppyColorImg from "../../../public/keepyUppyColor.svg";
 import taskifyColorImg from "../../../public/taskifyColor.svg";
 import rollingColorImg from "../../../public/RollingColor.svg";
