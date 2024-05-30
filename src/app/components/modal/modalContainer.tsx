@@ -1,5 +1,5 @@
 'use client'
-import { ReactNode, useEffect, useRef } from "react";
+import { ReactNode, useCallback, useEffect, useRef } from "react";
 import styles from "@/app/components/modal/modalContainer.module.scss";
 
 interface ModalContainerProps {
@@ -16,18 +16,18 @@ export default function ModalContainer({
 
 const modalOverlayRef = useRef<HTMLDivElement>(null);
 
-const handleClickOutsied =(e:MouseEvent)=>{
+const handleClickOutsied =useCallback((e:MouseEvent)=>{
   if(modalOverlayRef.current && modalOverlayRef.current === e.target){
     closeClick();
   }
-}
+},[closeClick]);
 
 useEffect(()=>{
   document.addEventListener("mousedown",handleClickOutsied);
   return()=>{
     document.removeEventListener("mousedown", handleClickOutsied);
   }
-},[handleClickOutsied]);
+},[]);
   return (
     <div ref={modalOverlayRef} className={styles["modal-overlay"]}>
       <div className={`${styles["modal-container"]} ${className}`}>
