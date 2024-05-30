@@ -20,17 +20,7 @@ export default function Project(){
   const[isKeepyUppyOpen,setIsKeepyUppyOpen]=useState<boolean>(false);
   const[isTaskifyOpen,setIsTaskifyOpen]=useState<boolean>(false);
   const[isRollingOpen,setIsRollingOpen]=useState<boolean>(false);
-  // const modalOpen =()=>{
-  //  setIsKeepyUppyOpen(true);
-  //  setIsTaskifyOpen(true);
-  //  setIsRollingOpen(true);
-  //   console.log('버튼 클릭');
-  // }
-  // const closeModal = () => {
-  //  setIsKeepyUppyOpen(false);
-  //  setIsTaskifyOpen(false);
-  //  setIsRollingOpen(false)
-  // }
+
   return(
   <div className={styles.container}>
     <div
