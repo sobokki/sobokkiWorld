@@ -3,9 +3,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import underline from "../../public/underline.svg"
 import styles from "@/app/page.module.scss"
-interface HomeProps{
-  
-}
+
 export default function Home() {
 
   return (

@@ -35,7 +35,11 @@ const {register, handleSubmit,setValue,formState: { errors },} = useForm<HookFor
  
 const onSubmit: SubmitHandler<HookFormTypes> = async (data) => {
  try{
-  const docId = await addLetter(data);
+  //현재 시간 생성 
+  const currentTime = new Date().toISOString();
+  //data객체에 createdAt속성 추가 
+  const updatedData ={...data, createdAt: currentTime};
+  const docId = await addLetter(updatedData);
   alert(`Document added with ID: ${docId}`);
   router.push("/visitor");
  }catch(error){
