@@ -39,8 +39,10 @@ export default function Visitor() {
     const fetchData = async () => {
       try {
         const data = await fetchLetters();
-        setLetters(data);
-        setTotalItems(data.length);
+        //날짜 순으로 정렬
+         data.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+         setLetters(data);
+         setTotalItems(data.length);
       } catch (error) {
         console.error("Failed to fetch letters:", error);
       }
