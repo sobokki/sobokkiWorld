@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../visitor/visitor.module.scss";
@@ -8,6 +8,8 @@ import Pagenation from "../components/pagenation/pagenation";
 import Card from "../components/card/card";
 import LetterModal from "../components/modal/letterModal/letterModal";
 import fetchLetters from "../data/fetchLetter";
+import { useSearchParams,useRouter } from "next/navigation";
+
 
 interface Letter {
   id: string;
@@ -17,11 +19,16 @@ interface Letter {
   createdAt: string; // 작성일자 추가
 }
 
+
 export default function Visitor() {
   const [letters, setLetters] = useState<Letter[]>([]);
   const [selectedLetter, setSelectedLetter] = useState<Letter | null>(null);
   const [totalItems, setTotalItems] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const page = searchParams.get("page");
+  const [currentPage, setCurrentPage] = useState<number>(page? parseInt(page):1);//
   const itemsPerPage = 5;
 
   useEffect(() => {
@@ -42,12 +49,21 @@ export default function Visitor() {
     fetchData();
   }, []);
 
+useEffect(()=>{
+  if(page){
+    setCurrentPage(parseInt(page));
+  }
+},[page]);
+
   const handleCardClick = (letter: Letter) => {
     setSelectedLetter(letter);
     setIsModalOpen(true);
   };
+  const handlePageChange =useCallback((page:number)=>{
+    setCurrentPage(page);
+    router.push(`?page=${page}`);
+  },[router]);
 
-  const currentPage = 1; // 임시 값, 실제 값은 Pagenation 컴포넌트에서 처리됨
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentLetters = letters.slice(startIndex, startIndex + itemsPerPage);
 
@@ -79,6 +95,7 @@ export default function Visitor() {
         totalItems={totalItems}
          itemCountPerPage={itemsPerPage}
         pageCount={5}
+        onPageChange={()=>handlePageChange(currentPage)}
       />
     </main>
   );

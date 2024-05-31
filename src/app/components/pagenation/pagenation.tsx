@@ -8,10 +8,10 @@ interface PagenationProps {
   totalItems: number; // 데이터의 총 개수 
   itemCountPerPage: number; // 페이지 당 보여줄 데이터의 수 
   pageCount: number; // 보여줄 페이지 개수 
-  // currentPage: number; // 현재 페이지 
+   onPageChange: (page: number) => void;
 }
 
-export default function Pagenation({ totalItems, itemCountPerPage, pageCount}: PagenationProps) {
+export default function Pagenation({ totalItems, itemCountPerPage, pageCount,onPageChange}: PagenationProps) {
   const searchParams =useSearchParams();
   const page =searchParams.get("page");
   const currentPage = page && parseInt(page) > 0? parseInt(page) :1;
@@ -26,6 +26,7 @@ export default function Pagenation({ totalItems, itemCountPerPage, pageCount}: P
     } else if (currentPage < start) {
       setStart(prev => prev - pageCount);
     }
+    onPageChange(currentPage);
   }, [currentPage, pageCount, start]);
 
   return (

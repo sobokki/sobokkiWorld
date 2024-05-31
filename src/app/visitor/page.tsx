@@ -10,7 +10,7 @@ const Visitor = dynamic(() => import("./visitor"), {
 export default function Page() {
   return (
     <Suspense fallback={<Loading />}>
-      <Visitor />
+      <Visitor  />
     </Suspense>
   );
 }
