@@ -27,7 +27,7 @@ export default function Pagenation({ totalItems, itemCountPerPage, pageCount,onP
       setStart(prev => prev - pageCount);
     }
     onPageChange(currentPage);
-  }, [currentPage, pageCount, start]);
+  }, [currentPage, pageCount, start,onPageChange]);
 
   return (
     <div className={styles.wrapper}>
