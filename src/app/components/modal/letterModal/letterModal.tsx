@@ -6,7 +6,7 @@ interface LetterModalProps{
   nickname: string;
   title: string;
   reason:string;
-  createdAt:string;
+  createdAt:Date;
 }
 export default function LetterModal({ closeClick ,nickname,title, reason,createdAt}: LetterModalProps){
   return(
@@ -16,7 +16,7 @@ export default function LetterModal({ closeClick ,nickname,title, reason,created
         닉네임 : {nickname}
       </div>
       <div className={styles.date}>
-        작성일자: {createdAt}
+        작성일자:  {createdAt.toString()}
       </div>
       </div>
        <div className={styles.title}>

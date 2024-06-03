@@ -15,7 +15,7 @@ export interface HookFormTypes {
   nickname: string;
   title: string;
   reason: string;
-  createdAt: string;
+  createdAt: Date;
 }
 export default function Writing(){
 const [nickname, setNickname] = useState<string>("");
@@ -36,7 +36,7 @@ const {register, handleSubmit,setValue,formState: { errors },} = useForm<HookFor
 const onSubmit: SubmitHandler<HookFormTypes> = async (data) => {
  try{
   //현재 시간 생성 
-  const currentTime = new Date().toISOString();
+  const currentTime = new Date();
   //data객체에 createdAt속성 추가 
   const updatedData ={...data, createdAt: currentTime};
   const docId = await addLetter(updatedData);

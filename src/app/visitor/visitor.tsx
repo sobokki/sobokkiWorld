@@ -16,7 +16,7 @@ interface Letter {
   nickname: string;
   title: string;
   reason: string;
-  createdAt: string; // 작성일자 추가
+  createdAt: Date;
 }
 
 
