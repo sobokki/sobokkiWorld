@@ -40,7 +40,7 @@ const onSubmit: SubmitHandler<HookFormTypes> = async (data) => {
   //data객체에 createdAt속성 추가 
   const updatedData ={...data, createdAt: currentTime};
   const docId = await addLetter(updatedData);
-  alert(`Document added with ID: ${docId}`);
+  alert(`닉네임: ${updatedData.nickname} 제목: ${updatedData.title} 이유: ${updatedData.reason}`);
   router.push("/visitor");
  }catch(error){
   console.log('An error occurred while submitting the letter', error);

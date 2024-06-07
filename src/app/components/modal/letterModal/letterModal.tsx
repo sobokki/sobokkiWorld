@@ -16,7 +16,7 @@ export default function LetterModal({ closeClick ,nickname,title, reason,created
         닉네임 : {nickname}
       </div>
       <div className={styles.date}>
-        작성일자: {createdAt}
+        작성일자: {createdAt.slice(0,10)}
       </div>
       </div>
        <div className={styles.title}>

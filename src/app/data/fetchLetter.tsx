@@ -10,11 +10,11 @@ export default async function fetchLetters(): Promise<HookFormTypes[]> {
     const lettersSnapshot = await getDocs(lettersCollection);
     const letterList = lettersSnapshot.docs.map(doc => {
       const data = doc.data();
-      const createdAtString = data.createdAt ? (data.createdAt instanceof Timestamp ? data.createdAt.toDate().toISOString() : new Date(data.createdAt).toISOString()) : new Date().toISOString();
-      const formattedCreatedAt = new Date(createdAtString).toLocaleString();
+    const createdAtString = data.createdAt ? (data.createdAt instanceof Timestamp ? data.createdAt.toDate().toISOString() : new Date(data.createdAt).toISOString()) : new Date().toISOString();
+  const createdAt = new Date(createdAtString);
       return {
         id: doc.id,
-        createdAt: formattedCreatedAt,
+        createdAt: createdAt.toLocaleDateString(),
         ...data
       };
     }) as HookFormTypes[];
