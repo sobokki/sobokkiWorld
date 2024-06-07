@@ -22,11 +22,19 @@
   font-weight: 400;
 }
 
+@mixin text-32-bold() {
+  font-family: Judson;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
 @mixin text-24style() {
   font-family: Judson;
   font-size: 2.4rem;
   font-weight: 400;
 }
+
+
 
 @mixin text-20style() {
   font-family: Niramit;

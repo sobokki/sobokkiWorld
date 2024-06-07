@@ -3,6 +3,10 @@
 .visitorWrapper {
   margin-top: 2rem;
   margin-right: 15rem;
+
+  @include tablet {
+    margin: 0 auto
+  }
 }
 
 .pencilIcon {

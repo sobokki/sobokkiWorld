@@ -9,6 +9,11 @@
   animation-duration: 3s;
   animation-name: slidein;
 
+  @include tablet {
+    gap: 7.8rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
 
   @keyframes slidein {
     from {
@@ -22,11 +27,17 @@
       width: 100%;
       opacity: 1; //진하게 
     }
+
   }
 
   .title {
     @include text-48-light();
     margin-left: 8rem;
+
+    @include tablet {
+      @include text-24style();
+      margin-left: 0;
+    }
   }
 
   .Link {
@@ -40,6 +51,11 @@
     gap: 2rem;
     white-space: nowrap;
 
+    @include tablet {
+      @include text-14style();
+      gap: 1rem;
+    }
+
   }
 
 
@@ -49,6 +65,11 @@
     color: $black;
     text-align: center;
     text-decoration: none;
+
+    @include tablet {
+      padding: 0.5rem 1.4rem;
+    }
+
 
 
     &:hover {

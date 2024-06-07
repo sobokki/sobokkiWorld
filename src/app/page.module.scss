@@ -10,10 +10,17 @@
   align-items: center;
   margin-left: 8.5rem;
 
+  @include tablet {
+    margin: 0 auto;
+  }
 
   .title {
     @include text-48-light();
     margin-bottom: 0.6rem;
+
+    @include tablet {
+      @include text-32style();
+    }
 
   }
 
@@ -23,6 +30,9 @@
     margin-bottom: 5.5rem;
     white-space: nowrap;
 
+    @include tablet {
+      @include text-32-bold();
+    }
   }
 
   button {
@@ -33,6 +43,12 @@
     color: $white;
     width: 20.4rem;
     height: 8.4rem;
+
+    @include tablet {
+      @include text-24style();
+      width: 15.4rem;
+      height: 5.4rem;
+    }
 
     &:hover {
       background-color: $baby-pink;

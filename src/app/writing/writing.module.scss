@@ -1,8 +1,5 @@
 @import"../main.scss";
 
-
-
-
 .writingWrapper {
   padding: 3rem 10rem 0 10rem;
   // display: flex;
@@ -10,6 +7,10 @@
 
   width: 100%;
 
+  @include tablet {
+    width: 44rem;
+    padding: 2rem 0 0 0;
+  }
 
   .backBtn {
     border-radius: 100%;

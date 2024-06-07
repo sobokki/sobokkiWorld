@@ -4,6 +4,7 @@ import Image from "next/image";
 import photo from "../../../../public/mainImg.svg"
 import styles from "./mainImg.module.scss"
 
+
 export default function MainImg(){
   const path = usePathname();
   const showImageOnPaths = ["/","/about","/project","/visitor"];

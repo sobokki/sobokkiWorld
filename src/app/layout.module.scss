@@ -5,4 +5,12 @@
   justify-content: space-between;
   margin-top: 0;
   gap: auto;
+
+  @include tablet {
+    flex-direction: column;
+    gap: 4.8rem;
+    align-items: center;
+  }
+
+
 }

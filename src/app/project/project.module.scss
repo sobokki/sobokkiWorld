@@ -12,9 +12,24 @@
   /* 스크롤바 너비 설정 (없음) */
   scrollbar-color: transparent;
 
+  @include tablet {
+    margin: 0;
+    height: 40rem;
+  }
+
+  .image,
+  .keepyUppyDarkImg {
+    @include tablet {
+      width: 36rem;
+    }
+  }
+
   /* 스크롤바 색상 설정 (투명) */
   .imageWrapper {
     position: relative;
+
+    @include tablet {}
+
   }
 
   .button {

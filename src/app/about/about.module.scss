@@ -10,13 +10,20 @@
   scrollbar-width: none;
   /* 스크롤바 너비 설정 (없음) */
   scrollbar-color: transparent;
-  /* 스크롤바 색상 설정 (투명) */
 
+  /* 스크롤바 색상 설정 (투명) */
+  @include tablet {
+    margin: 0 auto;
+    height: 40rem;
+  }
 
   span {
     @include text-24style();
     margin-right: 0.8rem;
 
+    @include tablet {
+      @include text-20style();
+    }
   }
 
   .image {
@@ -35,8 +42,16 @@
 
 .title {
   @include text-32style();
+
+  @include tablet {
+    @include text-24style();
+  }
 }
 
 .coment {
   @include text-20style();
+
+  @include tablet {
+    @include text-14style();
+  }
 }

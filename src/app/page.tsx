@@ -12,7 +12,7 @@ export default function Home() {
  <div className={styles.texts}>
    <h1 className={styles.title}>JEON SO EUN</h1>
    <Image src={underline} className="underline" alt="밑줄 아이콘"/>
-   <span className={styles.position}>Frontend developer</span>
+   <span className={styles.position}> Frontend developer</span>
    <Link href="/project" className={styles.linkText}>
    <button>Go Project</button>
    </Link>

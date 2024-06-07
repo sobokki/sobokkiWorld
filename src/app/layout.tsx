@@ -27,8 +27,9 @@ export default function RootLayout({
     <body>
    <Nav/>
    <div className={styles.contents}>
-   <MainImg/>
-
+    
+      <MainImg/>
+  
         {children}
    </div>
    </body>
