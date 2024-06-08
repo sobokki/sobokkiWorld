@@ -5,6 +5,11 @@
   padding: 2.3rem 2.6rem 10.8rem 2.6rem;
   background-color: $pink;
 
+  @include mobile {
+    width: 27rem;
+    padding: 2.3rem 2.6rem 5.8rem 2.6rem;
+    overflow-y: auto;
+  }
 }
 
 .nickDate {

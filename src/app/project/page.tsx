@@ -3,12 +3,12 @@ import { useState } from "react";
 import Image from "next/image"
 import styles from "./project.module.scss"
 import KeepyUppyModal from "../components/modal/projectModal/keepyUppyModal";
-import keepyUppyDarkImg from "../../../public/keepyUppydark.svg";
-import taskifyDarkImg from"../../../public/taskifyDark.svg";
-import rollingDarkImg from "../../../public/RolllingDark.svg";
-import keepyUppyColorImg from "../../../public/keepyUppyColor.svg";
-import taskifyColorImg from "../../../public/taskifyColor.svg";
-import rollingColorImg from "../../../public/RollingColor.svg";
+import keepyUppyDarkImg from "../../../public/keepyUppyDarkPng.png";
+import taskifyDarkImg from"../../../public/taskifyDarkPng.png";
+import rollingDarkImg from "../../../public/rollingDarkPng.png";
+import keepyUppyColorImg from "../../../public/keepyUppyPng.png";
+import taskifyColorImg from "../../../public/taskifyPng.png";
+import rollingColorImg from "../../../public/rollingPng.png";
 import TaskifyModal from "../components/modal/projectModal/taskifyModal";
 import RollingMdoal from "../components/modal/projectModal/rollingModal";
 export default function Project(){
