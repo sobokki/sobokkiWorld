@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import styles from "@/app/components/modal/projectModal/projectModal.module.scss";
 import ModalContainer from "../modalContainer";
-import RollingImg from "../../../../../public/rolling.svg";
+import RollingImg from "../../../../../public/rollingPng.png";
 import dotIcon from "../../../../../public/dot.svg";
 interface TaskifyModalProps {
   closeClick: () => void;

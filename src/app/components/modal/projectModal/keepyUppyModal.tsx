@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import styles from "@/app/components/modal/projectModal/projectModal.module.scss";
 import ModalContainer from "../modalContainer";
-import keepyUppyImg from "../../../../../public/keppyUppy.svg";
+import keepyUppyImg from "../../../../../public/keepyUppyPng.png";
 
 import dotIcon from "../../../../../public/dot.svg";
 interface KeepyUppyModalProps {

@@ -60,9 +60,9 @@
     }
 
     @include mobile {
-      @include text-24style();
-      width: 17.4rem;
-      height: 7.4rem;
+      @include text-20style();
+      width: 15.4rem;
+      height: 5.4rem;
     }
 
     &:hover {
