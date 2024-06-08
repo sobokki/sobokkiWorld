@@ -10,9 +10,18 @@
   animation-name: slidein;
 
   @include tablet {
-    gap: 7.8rem;
+    gap: 0rem;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+  }
+
+  @include mobile {
+    gap: 4.8rem;
+    justify-content: center;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    margin-left: 0rem;
   }
 
   @keyframes slidein {
@@ -38,6 +47,11 @@
       @include text-24style();
       margin-left: 0;
     }
+
+    @include mobile {
+      @include text-20style();
+      margin-left: 0;
+    }
   }
 
   .Link {
@@ -56,6 +70,11 @@
       gap: 1rem;
     }
 
+    @include mobile {
+      @include text-10style();
+      gap: 0.5rem;
+    }
+
   }
 
 
@@ -70,6 +89,9 @@
       padding: 0.5rem 1.4rem;
     }
 
+    @include mobile {
+      padding: 0.5rem 1rem;
+    }
 
 
     &:hover {

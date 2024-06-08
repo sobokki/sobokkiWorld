@@ -52,9 +52,9 @@ export default function About() {
           />
           {isBasicUp && (
             <div className={styles.image}>
-              <Image src={htmlImg} alt="html이미지" />
-              <Image src={cssImg} alt="css이미지" />
-              <Image src={javaScriptImg} alt="javaScript이미지" />
+              <Image  className={styles.boxImg} src={htmlImg} alt="html이미지" />
+              <Image  className={styles.boxImg} src={cssImg} alt="css이미지" />
+              <Image  className={styles.boxImg} src={javaScriptImg} alt="javaScript이미지" />
             </div>
           )}
         </div>
@@ -68,9 +68,9 @@ export default function About() {
           />
           {isFrameworksUp && (
             <div className={styles.image}>
-              <Image src={reactImg} alt="react이미지" />
-              <Image src={nextImg} alt="next이미지" />
-              <Image src={reacthookFormImg} alt="reacthookform이미지" />
+              <Image  className={styles.boxImg} src={reactImg} alt="react이미지" />
+              <Image  className={styles.boxImg} src={nextImg} alt="next이미지" />
+              <Image  className={styles.boxImg} src={reacthookFormImg} alt="reacthookform이미지" />
             </div>
           )}
         </div>
@@ -84,8 +84,8 @@ export default function About() {
           />
           {isToolsUp && (
             <div className={styles.image}>
-              <Image src={viteImg} alt="vite이미지" />
-              <Image src={typescriptImg} alt="typescript이미지" />
+              <Image  className={styles.boxImg} src={viteImg} alt="vite이미지" />
+              <Image  className={styles.boxImg} src={typescriptImg} alt="typescript이미지" />
             </div>
           )}
         </div>
@@ -101,9 +101,9 @@ export default function About() {
           />
           {isStylingUp && (
             <div className={styles.image}>
-              <Image src={styledComponentImg} alt="styledComponent이미지" />
-              <Image src={scssImg} alt="scss이미지" />
-              <Image src={tailwindImg} alt="tailwind이미지" />
+              <Image  className={styles.boxImg} src={styledComponentImg} alt="styledComponent이미지" />
+              <Image  className={styles.boxImg} src={scssImg} alt="scss이미지" />
+              <Image  className={styles.boxImg} src={tailwindImg} alt="tailwind이미지" />
             </div>
           )}
         </div>
@@ -117,7 +117,7 @@ export default function About() {
           />
           {isCollabUp && (
             <div className={styles.image}>
-              <Image src={githubImg} alt="github이미지" />
+              <Image  className={styles.boxImg}src={githubImg} alt="github이미지" />
             </div>
           )}
         </div>

@@ -12,5 +12,11 @@
     align-items: center;
   }
 
+  @include mobile {
+    flex-direction: column;
+    gap: 4.8rem;
+    align-items: center;
+  }
+
 
 }

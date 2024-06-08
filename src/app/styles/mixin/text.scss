@@ -16,6 +16,12 @@
   font-weight: 400;
 }
 
+@mixin text-40-bold() {
+  font-family: Niramit;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
 @mixin text-32style() {
   font-family: Judson;
   font-size: 3.2rem;
@@ -52,5 +58,11 @@
 @mixin text-10style() {
   font-family: Judson;
   font-size: 1rem;
+  font-weight: 400;
+}
+
+@mixin text-7style() {
+  font-family: Judson;
+  font-size: 0.7rem;
   font-weight: 400;
 }

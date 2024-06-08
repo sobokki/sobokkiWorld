@@ -22,14 +22,16 @@
     @include tablet {
       width: 36rem;
     }
+
+    @include mobile {
+      width: 29rem;
+      height: 13rem;
+    }
   }
 
   /* 스크롤바 색상 설정 (투명) */
   .imageWrapper {
     position: relative;
-
-    @include tablet {}
-
   }
 
   .button {

@@ -14,14 +14,19 @@
     margin: 0 auto;
   }
 
+
+
   .title {
     @include text-48-light();
     margin-bottom: 0.6rem;
 
     @include tablet {
-      @include text-32style();
+      @include text-40style();
     }
 
+    @include mobile {
+      @include text-32style();
+    }
   }
 
   .position {
@@ -31,6 +36,10 @@
     white-space: nowrap;
 
     @include tablet {
+      @include text-40-bold();
+    }
+
+    @include mobile {
       @include text-32-bold();
     }
   }
@@ -46,8 +55,14 @@
 
     @include tablet {
       @include text-24style();
-      width: 15.4rem;
-      height: 5.4rem;
+      width: 17.4rem;
+      height: 7.4rem;
+    }
+
+    @include mobile {
+      @include text-24style();
+      width: 17.4rem;
+      height: 7.4rem;
     }
 
     &:hover {

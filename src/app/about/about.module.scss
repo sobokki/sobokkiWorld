@@ -17,12 +17,21 @@
     height: 40rem;
   }
 
+  @include mobile {
+    margin-left: 1rem;
+    height: 46rem;
+  }
+
   span {
     @include text-24style();
     margin-right: 0.8rem;
 
     @include tablet {
       @include text-20style();
+    }
+
+    @include mobile {
+      @include text-14style();
     }
   }
 
@@ -32,9 +41,12 @@
     gap: 1.5rem;
     margin-bottom: 2rem;
 
+
     Image {
       width: 9.6rem;
       height: 6.3rem;
+
+
     }
   }
 
@@ -46,6 +58,10 @@
   @include tablet {
     @include text-24style();
   }
+
+  @include mobile {
+    @include text-20style();
+  }
 }
 
 .coment {
@@ -53,5 +69,16 @@
 
   @include tablet {
     @include text-14style();
+  }
+
+  @include mobile {
+    @include text-7style();
+  }
+}
+
+.boxImg {
+  @include mobile {
+    width: 10.6rem;
+    height: 4.3rem;
   }
 }

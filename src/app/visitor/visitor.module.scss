@@ -7,6 +7,11 @@
   @include tablet {
     margin: 0 auto
   }
+
+  @include mobile {
+    margin: 0 auto;
+    margin-left: 8rem;
+  }
 }
 
 .pencilIcon {
