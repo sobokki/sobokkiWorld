@@ -94,6 +94,7 @@ useEffect(()=>{
         />
       )}
       <Pagenation
+      className={styles.pageNation}
         totalItems={totalItems}
          itemCountPerPage={itemsPerPage}
         pageCount={5}

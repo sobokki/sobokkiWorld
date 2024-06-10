@@ -77,8 +77,16 @@
 }
 
 .boxImg {
+  width: 11rem;
+  height: 6rem;
+
+  @include tablet {
+    width: 7.6rem;
+    height: 4.3rem;
+  }
+
   @include mobile {
-    width: 10.6rem;
+    width: 7.6rem;
     height: 4.3rem;
   }
 }

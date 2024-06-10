@@ -9,9 +9,10 @@ interface PagenationProps {
   itemCountPerPage: number; // 페이지 당 보여줄 데이터의 수 
   pageCount: number; // 보여줄 페이지 개수 
    onPageChange: (page: number) => void;
+   className:string;
 }
 
-export default function Pagenation({ totalItems, itemCountPerPage, pageCount,onPageChange}: PagenationProps) {
+export default function Pagenation({ totalItems, itemCountPerPage, pageCount,onPageChange,className}: PagenationProps) {
   const searchParams =useSearchParams();
   const page =searchParams.get("page");
   const currentPage = page && parseInt(page) > 0? parseInt(page) :1;
@@ -30,7 +31,8 @@ export default function Pagenation({ totalItems, itemCountPerPage, pageCount,onP
   }, [currentPage, pageCount, start,onPageChange]);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${className}`} >
+
     <ul>
       <li className={`${styles.move} ${noPrev ? styles.invisible : ""}`}>
         <Link href={`?page=${start - 1}`}>이전</Link>
