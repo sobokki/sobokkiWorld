@@ -27,7 +27,7 @@ export default function Home() {
           </span>
         ) : (
           <span className={`${styles.position} ${styles.animated} ${styles.fadeOut}`}>
-            Your great coworker
+           Positive colleague
           </span>
         )}
    <Link href="/project" className={styles.linkText}>
