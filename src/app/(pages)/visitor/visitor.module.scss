@@ -1,16 +1,16 @@
-@import "../main.scss";
+@import "../../main.scss";
 
 .visitorWrapper {
   margin-top: 2rem;
-  margin-right: 15rem;
+  margin-left: auto;
+  margin-right: auto;
 
   @include tablet {
-    margin: 0 auto
+    margin: 0 auto;
   }
 
   @include mobile {
     margin: 0 auto;
-
   }
 }
 
@@ -25,7 +25,7 @@
   height: 3rem;
   border-radius: 100%;
   background-color: $light-gray;
-  text-align:center;
+  text-align: center;
 
   &:hover {
     background-color: $pink;
@@ -40,7 +40,6 @@
   padding: 1rem 1.2rem;
   border-radius: 1.1rem;
   margin-right: 2.2rem;
-
 }
 
 .banner {

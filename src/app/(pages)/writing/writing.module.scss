@@ -1,5 +1,4 @@
-@import"../main.scss";
-
+@import "../../main.scss";
 .writingWrapper {
   padding: 3rem 10rem 0 10rem;
   // display: flex;
@@ -81,9 +80,6 @@
     &:hover {
       border: 0.1rem solid $blue;
     }
-
-
-
   }
 
   .errorInput {
@@ -105,8 +101,6 @@
     background-color: $light-gray;
     outline: none;
   }
-
-
 
   .buttons {
     display: flex;

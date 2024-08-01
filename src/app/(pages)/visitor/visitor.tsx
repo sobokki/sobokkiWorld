@@ -1,15 +1,14 @@
-'use client'
+"use client";
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../visitor/visitor.module.scss";
-import pencilIcon from "../../../public/pencil.svg";
-import Pagenation from "../components/pagenation/pagenation";
-import Card from "../components/card/card";
-import LetterModal from "../components/modal/letterModal/letterModal";
-import fetchLetters from "../data/fetchLetter";
-import { useSearchParams,useRouter } from "next/navigation";
-
+import pencilIcon from "../../../../public/pencil.svg";
+import Pagenation from "../../components/pagenation/pagenation";
+import Card from "../../components/card/card";
+import LetterModal from "../../components/modal/letterModal/letterModal";
+import fetchLetters from "../../data/fetchLetter";
+import { useSearchParams, useRouter } from "next/navigation";
 
 interface Letter {
   id: string;
@@ -19,7 +18,6 @@ interface Letter {
   createdAt: string; // 작성일자 추가
 }
 
-
 export default function Visitor() {
   const [letters, setLetters] = useState<Letter[]>([]);
   const [selectedLetter, setSelectedLetter] = useState<Letter | null>(null);
@@ -28,7 +26,9 @@ export default function Visitor() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const page = searchParams.get("page");
-  const [currentPage, setCurrentPage] = useState<number>(page? parseInt(page):1);//
+  const [currentPage, setCurrentPage] = useState<number>(
+    page ? parseInt(page) : 1
+  );
   const itemsPerPage = 5;
 
   useEffect(() => {
@@ -40,9 +40,12 @@ export default function Visitor() {
       try {
         const data = await fetchLetters();
         //날짜 순으로 정렬
-         data.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-         setLetters(data);
-         setTotalItems(data.length);
+        data.sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        );
+        setLetters(data);
+        setTotalItems(data.length);
       } catch (error) {
         console.error("Failed to fetch letters:", error);
       }
@@ -51,20 +54,23 @@ export default function Visitor() {
     fetchData();
   }, []);
 
-useEffect(()=>{
-  if(page){
-    setCurrentPage(parseInt(page));
-  }
-},[page]);
+  useEffect(() => {
+    if (page) {
+      setCurrentPage(parseInt(page));
+    }
+  }, [page]);
 
   const handleCardClick = (letter: Letter) => {
     setSelectedLetter(letter);
     setIsModalOpen(true);
   };
-  const handlePageChange =useCallback((page:number)=>{
-    setCurrentPage(page);
-    router.push(`?page=${page}`);
-  },[router]);
+  const handlePageChange = useCallback(
+    (page: number) => {
+      setCurrentPage(page);
+      router.push(`?page=${page}`);
+    },
+    [router]
+  );
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentLetters = letters.slice(startIndex, startIndex + itemsPerPage);
@@ -74,12 +80,21 @@ useEffect(()=>{
       <div className={styles.banner}>
         <span className={styles.intro}>전소은은 어떤 사람인가요?</span>
         <Link href="/writing" className={styles.pencilIcon}>
-          <Image src={pencilIcon} alt="연필 아이콘" className={styles.pencilImg} />
+          <Image
+            src={pencilIcon}
+            alt="연필 아이콘"
+            className={styles.pencilImg}
+          />
         </Link>
       </div>
       <div>
         {currentLetters.map((letter) => (
-          <Card key={letter.id} title={letter.title} nickname={letter.nickname} onClick={() => handleCardClick(letter)} />
+          <Card
+            key={letter.id}
+            title={letter.title}
+            nickname={letter.nickname}
+            onClick={() => handleCardClick(letter)}
+          />
         ))}
       </div>
 
@@ -94,11 +109,11 @@ useEffect(()=>{
         />
       )}
       <Pagenation
-      className={styles.pageNation}
+        className={styles.pageNation}
         totalItems={totalItems}
-         itemCountPerPage={itemsPerPage}
+        itemCountPerPage={itemsPerPage}
         pageCount={5}
-        onPageChange={()=>handlePageChange(currentPage)}
+        onPageChange={() => handlePageChange(currentPage)}
       />
     </main>
   );

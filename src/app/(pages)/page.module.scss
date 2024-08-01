@@ -1,21 +1,16 @@
-@import "../app//main.scss";
-
+@import "/src/app/main.scss";
 
 .texts {
   display: flex;
   flex-direction: column;
   margin-right: 22.2rem;
-  margin-top: 10.6rem;
   text-align: center;
   align-items: center;
   margin-left: 11rem;
 
-
   @include tablet {
     margin: 0 auto;
   }
-
-
 
   .title {
     @include text-48-light();
@@ -75,7 +70,6 @@
     .linkText {
       @include text-32style();
       text-decoration: none;
-
     }
   }
 }

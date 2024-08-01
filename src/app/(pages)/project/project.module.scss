@@ -1,11 +1,11 @@
-@import "../main.scss";
+@import "../../main.scss";
 
 .container {
   margin-top: 2.5rem;
-  margin-right: 5rem;
+  margin-right: auto;
+  margin-left: auto;
   overflow-y: auto;
   height: 55rem;
-
 
   /* Firefox 브라우저용 */
   scrollbar-width: none;
@@ -49,6 +49,4 @@
     height: 2.6rem;
     white-space: nowrap;
   }
-
-
 }

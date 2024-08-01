@@ -1,13 +1,14 @@
-@import"../../main.scss";
+@import "../../main.scss";
 
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
-  margin: 0 auto;
   animation-duration: 3s;
   animation-name: slidein;
+  gap: 60rem;
+  margin-right: 50rem;
+  width: 100%;
 
   @include tablet {
     gap: 0rem;
@@ -36,11 +37,10 @@
       width: 100%;
       opacity: 1;
     }
-
   }
 
   .title {
-    @include text-48-light();
+    @include text-40-bold();
     margin-left: 8rem;
 
     @include tablet {
@@ -66,8 +66,6 @@
     white-space: nowrap;
     position: relative;
 
-
-
     @include tablet {
       @include text-14style();
       gap: 1rem;
@@ -77,9 +75,7 @@
       @include text-10style();
       gap: 0.5rem;
     }
-
   }
-
 
   .menu {
     padding: 0.2rem 1.5rem;
@@ -89,8 +85,7 @@
     text-decoration: none;
     position: relative;
     overflow: hidden;
-    transition: all .7s ease-out;
-
+    transition: all 0.7s ease-out;
 
     @include tablet {
       padding: 0.5rem 1.4rem;
@@ -108,7 +103,7 @@
       width: 100%;
       height: 100%;
       background-color: $black;
-      transition: all .7s ease-out;
+      transition: all 0.7s ease-out;
     }
 
     &:hover {
@@ -119,15 +114,11 @@
         width: 100%;
         right: -100%;
       }
-
     }
 
     .active {
       color: $baby-pink;
       background-color: $black;
     }
-
-
   }
-
 }

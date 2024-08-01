@@ -2,11 +2,11 @@
 
 .cardWrapper {
   width: 20rem;
-  height: 5rem;
+  height: 7rem;
   background-color: $light-gray;
   padding: 1rem;
   border-radius: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 
   &:hover {
     background-color: $pink;
@@ -17,10 +17,10 @@
   @include text-10style();
   margin-left: 1rem;
   color: $gray;
+  margin-bottom: 1.5rem;
 }
 
 .title {
   @include text-14style();
   text-align: center;
-
 }

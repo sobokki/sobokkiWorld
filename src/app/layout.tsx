@@ -1,10 +1,8 @@
-
-import "../app/globals.scss"
-import {Nav} from"@/app/components/nav/nav";
+import "../app/globals.scss";
+import { Nav } from "@/app/components/nav/nav";
 import type { Metadata } from "next";
-import styles from"@/app/layout.module.scss"
+import styles from "@/app/layout.module.scss";
 import MainImg from "./components/mainImg/mainImg";
-
 
 export const metadata: Metadata = {
   title: "sobokkiworld",
@@ -16,22 +14,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
-
     <html>
+      <body>
+        <Nav />
+        <div className={styles.contents}>
+          <MainImg />
 
-    <body>
-   <Nav/>
-   <div className={styles.contents}>
-    
-      <MainImg/>
-  
-        {children}
-   </div>
-   </body>
-       
+          {children}
+        </div>
+      </body>
     </html>
-    
   );
 }
