@@ -1,38 +1,16 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import underline from "../../../public/underline.svg";
 import styles from "@/app/(pages)/page.module.scss";
-import { useEffect, useState } from "react";
+import HomeTitle from "../components/homePage/homeTitle";
 
 export default function Home() {
-  const [showFrontendDeveloper, setShowFrontendDeveloper] = useState(true);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setShowFrontendDeveloper((prev) => !prev);
-    }, 5000);
-    return () => clearInterval(intervalId);
-  }, []);
-
   return (
     <div className={styles.container}>
       <div className={styles.texts}>
         <h1 className={styles.title}>JEON SO EUN</h1>
         <Image src={underline} className="underline" alt="밑줄 아이콘" />
-        {showFrontendDeveloper ? (
-          <span
-            className={`${styles.position} ${styles.animated} ${styles.fadeIn}`}
-          >
-            Frontend developer
-          </span>
-        ) : (
-          <span
-            className={`${styles.position} ${styles.animated} ${styles.fadeOut}`}
-          >
-            Positive colleague
-          </span>
-        )}
+        <HomeTitle />
         <Link href="/project" className={styles.linkText}>
           <button>Go Project</button>
         </Link>

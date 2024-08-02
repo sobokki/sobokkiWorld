@@ -87,14 +87,16 @@ export default function Visitor() {
           />
         </Link>
       </div>
-      <div>
+      <div className={styles.letters}>
         {currentLetters.map((letter) => (
-          <Card
-            key={letter.id}
-            title={letter.title}
-            nickname={letter.nickname}
-            onClick={() => handleCardClick(letter)}
-          />
+          <div>
+            <Card
+              key={letter.id}
+              title={letter.title}
+              nickname={letter.nickname}
+              onClick={() => handleCardClick(letter)}
+            />
+          </div>
         ))}
       </div>
 

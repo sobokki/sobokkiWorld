@@ -1,0 +1,51 @@
+@import "../app/main.scss";
+.notFoundWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+.title {
+  @include text-48-bold();
+  margin-bottom: 1rem;
+}
+
+.errorIcon {
+  color: $red;
+  font-size: 10rem;
+  margin-bottom: 1rem;
+}
+
+.ment {
+  max-width: 300px;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+// w-[95px] bg-blue-500 rounded-md text-lg p-4 text-white
+.backBtn {
+  width: 9.5rem;
+  background-color: $blue;
+  border-radius: 0.375rem;
+  font-size: 1.125rem;
+  padding: 1rem;
+  border: none;
+  color: $white;
+}
+.homeBtn {
+  border: none;
+  width: 9.5rem;
+  background-color: $pink;
+  border-radius: 0.375rem;
+  font-size: 1.125rem;
+  padding: 1rem;
+  color: $gray;
+}

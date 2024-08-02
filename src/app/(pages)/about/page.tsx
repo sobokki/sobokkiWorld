@@ -1,29 +1,11 @@
-"use client";
-import { useState } from "react";
-import Image from "next/image";
 import styles from "./about.module.scss";
-import htmlImg from "../../../../public/htmlPng.png";
-import cssImg from "../../../../public/cssPng.png";
-import javaScriptImg from "../../../../public/javascroptPng.png";
-import reactImg from "../../../../public/reactPng.png";
-import nextImg from "../../../../public/nextjsPng.png";
-import reacthookFormImg from "../../../../public/reactHookFormPng.png";
-import viteImg from "../../../../public/vitePng.png";
-import typescriptImg from "../../../../public/typescriptPng.png";
-import styledComponentImg from "../../../../public/styledComponentPng.png";
-import scssImg from "../../../../public/scssPng.png";
-import tailwindImg from "../../../../public/tailwindPng.png";
-import githubImg from "../../../../public/gitHubPng.png";
-import upIcon from "../../../../public/upIcon.svg";
-import downIcon from "../../../../public/downIcon.svg";
+import BasicContent from "@/app/components/aboutPage/BasicContent";
+import FrameContent from "@/app/components/aboutPage/FrameContent";
+import DevelopTools from "@/app/components/aboutPage/DevelopTools";
+import StyleContent from "@/app/components/aboutPage/StyleContent";
+import CollaboContent from "@/app/components/aboutPage/CollaboContent";
 
 export default function About() {
-  const [isBasicUp, setIsBasicUp] = useState<boolean>(true);
-  const [isFrameworksUp, setIsFrameworksUp] = useState<boolean>(true);
-  const [isToolsUp, setIsToolsUp] = useState<boolean>(true);
-  const [isStylingUp, setIsStylingUp] = useState<boolean>(true);
-  const [isCollabUp, setIsCollabUp] = useState<boolean>(true);
-
   return (
     <main className={styles.container}>
       <section className={styles.intro}>
@@ -47,110 +29,23 @@ export default function About() {
         <h2 className={styles.title}>Skills</h2>
         <div>
           <span>Basic</span>
-          <Image
-            src={isBasicUp ? downIcon : upIcon}
-            alt={isBasicUp ? "down" : "up"}
-            className={styles.toggleIcon}
-            onClick={() => setIsBasicUp(!isBasicUp)}
-          />
-          {isBasicUp && (
-            <div className={styles.image}>
-              <Image className={styles.boxImg} src={htmlImg} alt="html이미지" />
-              <Image className={styles.boxImg} src={cssImg} alt="css이미지" />
-              <Image
-                className={styles.boxImg}
-                src={javaScriptImg}
-                alt="javaScript이미지"
-              />
-            </div>
-          )}
+          <BasicContent />
         </div>
         <div>
           <span>Frontend Frameworks & Libraries</span>
-          <Image
-            src={isFrameworksUp ? downIcon : upIcon}
-            alt={isFrameworksUp ? "down" : "up"}
-            className={styles.toggleIcon}
-            onClick={() => setIsFrameworksUp(!isFrameworksUp)}
-          />
-          {isFrameworksUp && (
-            <div className={styles.image}>
-              <Image
-                className={styles.boxImg}
-                src={reactImg}
-                alt="react이미지"
-              />
-              <Image className={styles.boxImg} src={nextImg} alt="next이미지" />
-              <Image
-                className={styles.boxImg}
-                src={reacthookFormImg}
-                alt="reacthookform이미지"
-              />
-            </div>
-          )}
+          <FrameContent />
         </div>
         <div>
           <span>Frontend Development Tools</span>
-          <Image
-            src={isToolsUp ? downIcon : upIcon}
-            alt={isToolsUp ? "down" : "up"}
-            className={styles.toggleIcon}
-            onClick={() => setIsToolsUp(!isToolsUp)}
-          />
-          {isToolsUp && (
-            <div className={styles.image}>
-              <Image className={styles.boxImg} src={viteImg} alt="vite이미지" />
-              <Image
-                className={styles.boxImg}
-                src={typescriptImg}
-                alt="typescript이미지"
-              />
-            </div>
-          )}
+          <DevelopTools />
         </div>
         <div>
           <span>Styling-related</span>
-          <Image
-            src={isStylingUp ? downIcon : upIcon}
-            alt={isStylingUp ? "down" : "up"}
-            className={styles.toggleIcon}
-            onClick={() => setIsStylingUp(!isStylingUp)}
-            width={12}
-            height={12}
-          />
-          {isStylingUp && (
-            <div className={styles.image}>
-              <Image
-                className={styles.boxImg}
-                src={styledComponentImg}
-                alt="styledComponent이미지"
-              />
-              <Image className={styles.boxImg} src={scssImg} alt="scss이미지" />
-              <Image
-                className={styles.boxImg}
-                src={tailwindImg}
-                alt="tailwind이미지"
-              />
-            </div>
-          )}
+          <StyleContent />
         </div>
         <div>
           <span>Collaboration & Version Control</span>
-          <Image
-            src={isCollabUp ? downIcon : upIcon}
-            alt={isCollabUp ? "down" : "up"}
-            className={styles.toggleIcon}
-            onClick={() => setIsCollabUp(!isCollabUp)}
-          />
-          {isCollabUp && (
-            <div className={styles.image}>
-              <Image
-                className={styles.boxImg}
-                src={githubImg}
-                alt="github이미지"
-              />
-            </div>
-          )}
+          <CollaboContent />
         </div>
       </section>
     </main>
