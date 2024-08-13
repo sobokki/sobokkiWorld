@@ -3,6 +3,7 @@
 .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   animation-duration: 3s;
   animation-name: slidein;
@@ -65,7 +66,7 @@
     gap: 2rem;
     white-space: nowrap;
     position: relative;
-
+    margin-right: 20rem;
     @include tablet {
       @include text-14style();
       gap: 1rem;
@@ -86,6 +87,7 @@
     position: relative;
     overflow: hidden;
     transition: all 0.7s ease-out;
+    border-radius: 0.8rem;
 
     @include tablet {
       padding: 0.5rem 1.4rem;

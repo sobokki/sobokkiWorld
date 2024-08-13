@@ -19,6 +19,8 @@
 
   .image,
   .keepyUppyDarkImg {
+    border-radius: 0.8rem;
+
     @include tablet {
       width: 36rem;
     }
@@ -32,6 +34,7 @@
   /* 스크롤바 색상 설정 (투명) */
   .imageWrapper {
     position: relative;
+    margin-bottom: 1rem;
   }
 
   .button {
