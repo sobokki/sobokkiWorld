@@ -72,6 +72,7 @@
     background-color: $light-gray;
     outline: none;
     border: none;
+    border-radius: 0.8rem;
 
     &::placeholder {
       color: $gray;
@@ -100,6 +101,7 @@
     padding-top: 1rem;
     background-color: $light-gray;
     outline: none;
+    border-radius: 0.8rem;
   }
 
   .buttons {
