@@ -9,11 +9,12 @@ import Input from "../input/input";
 import backIcon from "../../../../public/back.svg";
 
 export interface HookFormTypes {
+  id: string;
   nickname: string;
   title: string;
   reason: string;
+  createdAt: string;
 }
-
 export default function WritingForm() {
   const [nickname, setNickname] = useState<string>("");
   const [title, setTitle] = useState<string>("");

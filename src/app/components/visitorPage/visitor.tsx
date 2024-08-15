@@ -2,11 +2,11 @@
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../visitor/visitor.module.scss";
+import styles from "./visitor.module.scss";
 import pencilIcon from "../../../../public/pencil.svg";
-import Pagenation from "../../components/pagenation/pagenation";
-import Card from "../../components/card/card";
-import LetterModal from "../../components/modal/letterModal/letterModal";
+import Pagenation from "../pagenation/pagenation";
+import Card from "../card/card";
+import LetterModal from "../modal/letterModal/letterModal";
 import fetchLetters from "../../data/fetchLetter";
 import { useSearchParams, useRouter } from "next/navigation";
 
@@ -89,9 +89,8 @@ export default function Visitor() {
       </div>
       <div className={styles.letters}>
         {currentLetters.map((letter) => (
-          <div>
+          <div key={letter.id}>
             <Card
-              key={letter.id}
               title={letter.title}
               nickname={letter.nickname}
               onClick={() => handleCardClick(letter)}

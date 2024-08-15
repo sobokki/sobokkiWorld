@@ -1,7 +1,7 @@
 // firestoreService.js
 import { db } from "./firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
-import { HookFormTypes } from "./(pages)/writing/page";
+import { HookFormTypes } from "./components/writePage/WritingForm";
 export const addLetter = async (data: HookFormTypes) => {
   try {
     const docRef = await addDoc(collection(db, "letters"), data);

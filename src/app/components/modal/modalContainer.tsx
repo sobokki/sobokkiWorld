@@ -1,11 +1,11 @@
-'use client'
+"use client";
 import { ReactNode, useCallback, useEffect, useRef } from "react";
 import styles from "@/app/components/modal/modalContainer.module.scss";
 
 interface ModalContainerProps {
   children: ReactNode;
   className?: string;
-  closeClick:()=>void;
+  closeClick: () => void;
 }
 
 export default function ModalContainer({
@@ -13,21 +13,23 @@ export default function ModalContainer({
   className,
   closeClick,
 }: ModalContainerProps) {
+  const modalOverlayRef = useRef<HTMLDivElement>(null);
 
-const modalOverlayRef = useRef<HTMLDivElement>(null);
+  const handleClickOutsied = useCallback(
+    (e: MouseEvent) => {
+      if (modalOverlayRef.current && modalOverlayRef.current === e.target) {
+        closeClick();
+      }
+    },
+    [closeClick]
+  );
 
-const handleClickOutsied =useCallback((e:MouseEvent)=>{
-  if(modalOverlayRef.current && modalOverlayRef.current === e.target){
-    closeClick();
-  }
-},[closeClick]);
-
-useEffect(()=>{
-  document.addEventListener("mousedown",handleClickOutsied);
-  return()=>{
-    document.removeEventListener("mousedown", handleClickOutsied);
-  }
-},[]);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutsied);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutsied);
+    };
+  }, [handleClickOutsied]);
   return (
     <div ref={modalOverlayRef} className={styles["modal-overlay"]}>
       <div className={`${styles["modal-container"]} ${className}`}>

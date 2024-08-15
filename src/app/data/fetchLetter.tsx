@@ -1,6 +1,6 @@
 import { collection, getDocs, Timestamp } from "firebase/firestore";
 import { db } from "../firebaseConfig";
-import { HookFormTypes } from "../(pages)/writing/page";
+import { HookFormTypes } from "../components/writePage/WritingForm";
 
 // 비동기 데이터 가져오기 함수
 export default async function fetchLetters(): Promise<HookFormTypes[]> {

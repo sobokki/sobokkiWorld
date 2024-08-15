@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-const Visitor = dynamic(() => import("./visitor"), {
+const Visitor = dynamic(() => import("../../components/visitorPage/visitor"), {
   suspense: true,
 });
 
