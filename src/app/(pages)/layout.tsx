@@ -20,7 +20,6 @@ export default function PageLayout({
         <Nav />
         <div className={styles.contents}>
           <MainImg />
-
           {children}
         </div>
       </body>

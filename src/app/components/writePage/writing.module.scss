@@ -1,10 +1,7 @@
 @import "../../main.scss";
 .writingWrapper {
-  padding: 3rem 10rem 0 10rem;
-  // display: flex;
-  //flex-direction: column;
-
   width: 100%;
+  padding: 3rem 10rem 0 10rem;
 
   @include tablet {
     width: 44rem;
