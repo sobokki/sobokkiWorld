@@ -6,16 +6,16 @@
   margin-right: 22.2rem;
   text-align: center;
   align-items: center;
-  margin-left: 11rem;
+  margin-top: 5rem;
 
   @include tablet {
     margin: 0 auto;
   }
 
   .title {
-    @include text-48-light();
+    @include text-60-bold;
     margin-bottom: 0.6rem;
-
+    white-space: nowrap;
     @include tablet {
       @include text-40style();
     }

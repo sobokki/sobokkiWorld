@@ -3,9 +3,9 @@
 .contents {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 3.6rem;
-  gap: auto;
+  align-items: start;
+  margin-top: 10rem;
+  gap: 40rem;
 
   @include tablet {
     flex-direction: column;

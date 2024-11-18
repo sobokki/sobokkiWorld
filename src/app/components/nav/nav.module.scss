@@ -7,9 +7,7 @@
   width: 100%;
   animation-duration: 3s;
   animation-name: slidein;
-  gap: 60rem;
   margin-right: 40rem;
-  width: 100%;
 
   @include tablet {
     gap: 0rem;
@@ -41,8 +39,8 @@
   }
 
   .title {
-    @include text-40-bold();
-    margin-left: 8rem;
+    @include text-48-bold;
+    margin-left: 11rem;
 
     @include tablet {
       @include text-24style();
@@ -79,7 +77,8 @@
   }
 
   .menu {
-    padding: 0.2rem 1.5rem;
+    @include text-32style;
+    padding: 0.5rem 1.5rem;
     background-color: $baby-pink;
     color: $black;
     text-align: center;

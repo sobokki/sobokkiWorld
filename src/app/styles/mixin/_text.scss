@@ -1,3 +1,9 @@
+@mixin text-60-bold() {
+  font-family: Judson;
+  font-size: 10rem;
+  font-weight: 700;
+}
+
 @mixin text-48-light() {
   font-family: Judson;
   font-size: 4.8rem;

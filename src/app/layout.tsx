@@ -1,10 +1,8 @@
 import "../app/globals.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import styles from "./layout.module.scss"; // CSS 모듈 가져오기
+import styles from "./layout.module.scss";
 
-// 다음과 같이 타입을 명확히 지정하거나,
-// @ts-ignore를 사용하여 타입 오류를 무시할 수 있습니다.
 const inter = Inter({
   subsets: ["latin"],
 });
