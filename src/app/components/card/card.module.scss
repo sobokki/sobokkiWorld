@@ -1,7 +1,7 @@
 @import "../../main.scss";
 
 .cardWrapper {
-  width: 20rem;
+  width: 26.5rem;
   height: 7rem;
   background-color: $light-gray;
   padding: 1rem;
@@ -14,13 +14,13 @@
 }
 
 .nickname {
-  @include text-10style();
+  @include text-14style();
   margin-left: 1rem;
   color: $gray;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .title {
-  @include text-14style();
+  @include text-20style();
   text-align: center;
 }

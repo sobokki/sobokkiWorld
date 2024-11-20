@@ -6,6 +6,7 @@ import upIcon from "../../../../public/upIcon.svg";
 import downIcon from "../../../../public/downIcon.svg";
 import viteImg from "../../../../public/vitePng.png";
 import typescriptImg from "../../../../public/typescriptPng.png";
+import reactQueryImg from "../../../../public/reactQuery.png";
 export default function DevelopTools() {
   const [isToolsUp, setIsToolsUp] = useState<boolean>(true);
   return (
@@ -23,6 +24,11 @@ export default function DevelopTools() {
             className={styles.boxImg}
             src={typescriptImg}
             alt="typescript이미지"
+          />
+          <Image
+            className={styles.boxImg}
+            src={reactQueryImg}
+            alt="react query 이미지"
           />
         </div>
       )}

@@ -47,20 +47,21 @@
   }
 
   .nickname {
-    width: 100%;
+    width: 44rem;
     padding: 0.8rem 0 0.8rem 0.9rem;
   }
 
   .title {
-    width: 100%;
+    width: 44rem;
     padding: 0.8rem 0 0.8rem 0.9rem;
   }
 
   .reason {
     @include text-14style;
     margin-top: 0.8rem;
+    margin-bottom: 1rem;
     padding: 0rem 0 0 0.9rem;
-    height: 25rem;
+    height: 20rem;
     text-align: start;
     width: 100%;
     max-width: 100%;
@@ -121,5 +122,9 @@
     small {
       color: $red;
     }
+  }
+  .reasonLabel {
+    @include text-14style;
+    width: 5.6rem;
   }
 }

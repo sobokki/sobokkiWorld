@@ -63,8 +63,8 @@
   }
 }
 
-.coment {
-  @include text-20style();
+.comment {
+  @include text-14style();
 
   @include tablet {
     @include text-14style();
@@ -78,6 +78,7 @@
 .boxImg {
   width: 11rem;
   height: 6rem;
+  border-radius: 1.5rem;
 
   @include tablet {
     width: 7.6rem;

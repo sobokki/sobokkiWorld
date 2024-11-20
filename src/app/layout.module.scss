@@ -2,10 +2,10 @@
 
 .contents {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
   margin-top: 10rem;
-  gap: 40rem;
+  // gap: 25rem;
 
   @include tablet {
     flex-direction: column;

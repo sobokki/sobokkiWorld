@@ -33,13 +33,13 @@ export default function Visitor() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []); // 페이지 이동 시 스크롤 맨 위로 초기화 시키기
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await fetchLetters();
-        //날짜 순으로 정렬
+
         data.sort(
           (a, b) =>
             new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
