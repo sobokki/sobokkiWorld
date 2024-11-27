@@ -65,6 +65,10 @@
     white-space: nowrap;
     position: relative;
     margin-right: 20rem;
+    .active {
+      color: $baby-pink;
+      background-color: $black;
+    }
     @include tablet {
       @include text-14style();
       gap: 1rem;
@@ -115,11 +119,6 @@
         width: 100%;
         right: -100%;
       }
-    }
-
-    .active {
-      color: $baby-pink;
-      background-color: $black;
     }
   }
 }

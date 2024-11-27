@@ -2,8 +2,14 @@
 
 .modalContainerWrapper {
   .modalContainer {
+    padding: 4rem;
     background-color: $baby-pink;
-    padding: 2.3rem 2rem 0rem 2rem;
+    @include tablet {
+      padding: 2.3rem 2rem 0rem 2rem;
+      width: 30rem;
+    }
+
+    width: 50rem;
   }
 
   section {
@@ -11,32 +17,55 @@
   }
 
   .keepyUppyImg {
-    width: 27rem;
-    height: 15rem;
+    width: 47rem;
+    height: 22rem;
     margin-left: 0.8rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 3rem;
+    @include tablet {
+      width: 27rem;
+      height: 15rem;
+
+      margin-bottom: 0.8rem;
+    }
+
     border-radius: 1rem;
   }
 
   .Img {
-    width: 27rem;
-    height: 15rem;
-    margin-bottom: 0.8rem;
-    border-radius: 1rem;
+    width: 47rem;
+    height: 22rem;
+    margin-bottom: 3rem;
+    @include tablet {
+      width: 27rem;
+      height: 15rem;
+      margin-bottom: 0.8rem;
+    }
 
+    border-radius: 1rem;
   }
 
   .title {
-    @include text-14style();
+    @include text-20style();
+    @include tablet {
+      @include text-14style();
+    }
+    @include mobile {
+      @include text-14style();
+    }
+
     display: flex;
     align-items: center;
     gap: 1.1rem;
-
-
   }
 
   .explanation {
-    @include text-10style();
+    @include text-14style();
+    @include tablet {
+      @include text-10style();
+    }
+    @include mobile {
+      @include text-10style();
+    }
     margin-top: 1rem;
   }
 

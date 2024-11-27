@@ -45,11 +45,11 @@ export default function Pagenation({
         {[...Array(pageCount)].map(
           (_, i) =>
             start + i <= totalPages && (
-              <li key={i}>
-                <Link
-                  className={`${styles.page}${currentPage === start + i ? styles.active : ""}`}
-                  href={`?page=${start + i}`}
-                >
+              <li
+                key={i}
+                className={`${currentPage === start + i ? styles.active : ""}`}
+              >
+                <Link className={`${styles.page}`} href={`?page=${start + i}`}>
                   {start + i}
                 </Link>
               </li>
