@@ -75,7 +75,9 @@ export default function KeepyUppyModal({ closeClick }: KeepyUppyModalProps) {
             <span> Site</span>
           </div>
           <div className={styles.explanation}>
-            <Link href="http://54.66.46.187/">http://54.66.46.187/</Link>
+            <Link href="http://54.66.46.187/" target="_blank">
+              http://54.66.46.187/
+            </Link>
           </div>
         </section>
 
@@ -85,7 +87,10 @@ export default function KeepyUppyModal({ closeClick }: KeepyUppyModalProps) {
             <span> GitHub</span>
           </div>
           <div className={styles.explanation}>
-            <Link href="https://github.com/codeit-part4-8team-project/main">
+            <Link
+              href="https://github.com/codeit-part4-8team-project/main"
+              target="_blank"
+            >
               https://github.com/codeit-part4-8team-project/main
             </Link>
           </div>
